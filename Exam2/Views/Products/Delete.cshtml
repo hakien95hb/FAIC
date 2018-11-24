@@ -1,0 +1,75 @@
+﻿@model Exam2.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantilyPerUnit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantilyPerUnit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitslnStock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitslnStock)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitOnOrder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitOnOrder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReorderLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReorderLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Discontinued)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Discontinued)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProductID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
